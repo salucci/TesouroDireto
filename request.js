@@ -16,7 +16,7 @@ let url = "https://www.tesourodireto.com.br/json/br/com/b3/tesourodireto/service
 
 let settings = { method: "Get" };
 
-cron.schedule('0-59 * * * *', () => {
+cron.schedule('0,30 * * * * *', () => {
     fetch(url, settings)
     .then(res => res.json())
     .then((json) => {
